@@ -226,6 +226,34 @@
     }
   });
 
+  document.addEventListener('DOMContentLoaded', function () {
+    // Sélectionnez tous les liens avec la classe 'activate-filter'
+    const filterLinks = document.querySelectorAll('a.activate-filter');
+
+    // Ajoutez un gestionnaire d'événements pour chaque lien
+    filterLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault(); // Empêche le comportement par défaut du lien
+
+            const filterId = link.getAttribute('href').substring(1); // Récupère l'ID du filtre sans le '#'
+            const filterElement = document.getElementById(filterId); // Trouve l'élément de filtre correspondant
+
+            if (filterElement) {
+                // Déclenche le clic sur l'élément de filtre correspondant
+                filterElement.click();
+            }
+
+            // Utilisez history.pushState pour naviguer vers l'ancre sans recharger la page
+            window.history.pushState(null, null, '#portfolio');
+
+            // Défilement vers l'élément de filtre après l'activation du filtre
+            document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+});
+
+
+
   /**
    * Navmenu Scrollspy
    */
