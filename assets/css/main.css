@@ -561,10 +561,34 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   position: relative;
 }
-
+.tab-serv ul {
+  border-top: 1px solid #dddddd; /* Bordure des éléments p */
+  list-style-type: none; /* Supprime les puces de la liste */
+  padding: 0;
+}
+.tab-serv li {
+  border-left: 1px solid #dddddd; /* Bordure des éléments p */
+  border-right: 1px solid #dddddd; /* Bordure des éléments p */
+  padding: 10px;
+}
+.tab-serv p {
+  border-top: 1px solid #dddddd; /* Bordure des éléments p */
+  border-left: 1px solid #dddddd; /* Bordure des éléments p */
+  border-right: 1px solid #dddddd; /* Bordure des éléments p */
+  padding: 10px;
+  margin: 0;
+}
+.tab-serv .tab-end{
+  border-top: 1px solid #dddddd; /* Bordure des éléments p */
+  border-left: 1px solid #dddddd; /* Bordure des éléments p */
+  border-bottom: 1px solid #dddddd; /* Bordure des éléments p */
+  border-right: 1px solid #dddddd; /* Bordure des éléments p */
+  padding: 10px;
+  margin: 0;
+}
 .section-title h2 {
   font-size: 32px;
   font-weight: 700;
@@ -574,6 +598,27 @@ section,
 }
 
 .section-title h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.section-title h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h3:after {
   content: "";
   position: absolute;
   display: block;
@@ -1262,7 +1307,15 @@ section,
   background: var(--accent-color);
   color: var(--contrast-color);
 }
+.container-proj {
+  box-shadow: 0px 0px 20px color-mix(in srgb, var(--default-color), transparent 90%);
+  padding: 30px;
+  margin: 200px;
+}
 
+.container-proj p {
+  text-align: justify;
+}
 .contact .php-email-form {
   box-shadow: 0px 0px 20px color-mix(in srgb, var(--default-color), transparent 90%);
   padding: 30px;
@@ -1366,6 +1419,18 @@ section,
 --------------------------------------------------------------*/
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
+}
+
+.center-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-image img {
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 1rem;
 }
 
 .portfolio-details .swiper-wrapper {
