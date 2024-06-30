@@ -105,13 +105,14 @@
 
           <div class="container" data-aos="fade-up">
             <p>
-              Des télévisions connectées se trouvent sur 3 sites différents du Groupe et ont pour but d’afficher des
-              informations concernant l’entreprise. Le problème est qu’il est difficile de mettre à jour les
-              informations qui apparaissent sur les télévisions. Face à cette problématique, j’ai donc proposé de créer
+              Des téléviseurs connectés se trouvent sur 3 sites différents du Groupe et ont pour objectif d’afficher des
+              informations concernant l’entreprise. Le problème est qu’il était difficile de mettre à jour les
+              informations qui apparaissent sur ces téléviseurs. Face à cette problématique, j’ai donc proposé de créer
               une application que la chargée de communication pourra utiliser pour ajouter, modifier ou supprimer des
-              images qui seront stockées dans une base de données. Il faut également créer des sites web capables
-              d’afficher les images stockées dans la base de données sous forme de diaporama, chaque site Zekat en aura
-              un différent. La base de données ainsi que les sites web seront stockés sur un serveur Linux (Debian 12)
+              images qui seront stockées dans une base de données. Il faut également créer des sites Web capables
+              d’afficher les images stockées dans la base de données sous forme de diaporama. Chaque site Zekat en
+              possédera
+              un différent. La base de données ainsi que les sites Web seront stockés sur un serveur Linux (Debian 12)
               que je vais devoir créer.</p>
             <p>J’ai donc commencé le lundi 3 juin le projet en commençant par le développement de l’application.</p>
 
@@ -147,7 +148,7 @@
 
         <div class="container" data-aos="fade-up">
           <p>J’ai donc commencé par créer une fenêtre de connexion qui demandera à l’utilisateur un mot de passe (il n’y
-            a qu’un seul mot de passe stocké et haché dans la base de données).</p>
+            a qu’un seul mot de passe stocké et hashé dans la base de données).</p>
           <div class="center-image">
             <img src="../../assets/img/proj/app_conn.png" alt="Fenêtre connexion">
           </div>
@@ -301,7 +302,7 @@
 
         <div class="container" data-aos="fade-up">
           <p>La table « SITE » contient les 3 sites Zekat (Jugon-les-Lacs, Bellevigne-les-Châteaux, Beaucouzé) ainsi que
-            leur ID.</p>
+            leurs ID.</p>
         </div>
       </section><!-- /Starter Section Section -->
 
@@ -332,12 +333,12 @@
             base
             de données pour qu’elles ne soient pas accessibles par l'utilisateur.</p>
           <p>Les sites ont pour but d’afficher une par une les images stockées dans la base de données. Les images
-            s’adapteront automatiquement à la résolution des télévisions. Lorsque toutes les images ont été affichées,
+            s’adapteront automatiquement à la résolution des téléviseurs. Lorsque toutes les images ont été affichées,
             le
             site se rafraîchit automatiquement au cas où des images sont ajoutées ou supprimées de la base de données,
-            évitant ainsi d’avoir à rafraîchir manuellement le site sur chacune des 3 télévisions. Les images sont
+            évitant ainsi d’avoir à rafraîchir manuellement le site sur chacune des 3 téléviseurs. Les images sont
             affichées pendant le nombre de secondes indiqué lors de leur ajout et ne sont visibles que sur les
-            télévisions
+            téléviseurs
             correspondant à leur ID de site.</p>
         </div>
       </section><!-- /Starter Section Section -->
@@ -349,15 +350,14 @@
         </div><!-- End Section Title -->
 
         <div class="container" data-aos="fade-up">
-          <p>J’ai décidé de faire le serveur sur un linux Debian 12 car c’est ce qu’on utilise en cours et je ne voyait
-            pas de contrainte m’obligeant a le faire sur un autre OS. J’ai donc configurer le serveur (Adresse IP, SSH,
-            Sécurité etc…) puis j’ai commencé par installé MariaDB pour ma base de données j’ai également installé
-            PHPMyAdmin afin que ça soit plus simple a mettre en place et avoir une interface graphique. J’ai eu
-            malheureusement eu un problème entre MariaDB et mon application j’ai donc du changer pour du MySQL. Après
-            avoir fait ma base de données j’ai commencé à installer Apache pour y mettre mon site. J’avais plus qu’à
-            rendre PHPMyAdmin et le site web accessible j’ai décider de mettre mon site sur le port 8080 et PHPMyAdmin
-            sur
-            le port 8181.</p>
+          <p>J’ai décidé de faire le serveur sur un linux Debian 12 car c’est ce qu’on utilise en cours et je ne voyais
+            pas de contrainte m’obligeant à le faire sur un autre OS. J’ai donc configurer le serveur (Adresse IP, SSH,
+            Sécurité etc…) puis j’ai commencé par installer MariaDB pour ma base de données. J’ai également installé
+            PHPMyAdmin afin que cela soit plus simple à mettre en place et ainsi avoir une interface graphique. J’ai
+            malheureusement eu un problème entre MariaDB et mon application, j’ai donc dû changer pour MySQL. Après
+            avoir fait ma base de données, j’ai commencé à installer Apache pour y mettre mon site. Il ne me restais
+            qu'à
+            rendre PHPMyAdmin et le site web accessible.</p>
           <div class="tab-serv">
             <ul>
               <p>PHPMyAdmin (Base de Données)</p>
@@ -412,8 +412,9 @@
         </div><!-- End Section Title -->
 
         <div class="container" data-aos="fade-up">
-          <p>Il a fallu que je crée une documentation pour que la chargée de production comprenne le fonctionnement de
-            l'application. Pour cela, j'ai simplement utilisé un document Word avec des captures d'écran et des
+          <p>Il a fallu que je crée une documentation pour que la chargée de communication comprenne le fonctionnement
+            de
+            l'application. Pour cela, j'ai simplement créer un document Word avec des captures d'écran et des
             explications étape par étape des fonctionnalités et de leur utilisation.</p>
         </div>
       </section><!-- /Starter Section Section -->
@@ -424,17 +425,18 @@
         </div><!-- End Section Title -->
 
         <div class="container" data-aos="fade-up">
-          <p>Ce stage m'a appris à gérer un projet entièrement seul à partir de zéro, sans beaucoup d'indications. J'ai
+          <p>Ce stage m'a appris à gérer un projet du début à la fin et avec une relative autonomie. J'ai
             dû
-            réfléchir à quelles fonctionnalités inclure dans mon application pour la rendre aussi simple que possible à
-            utiliser pour les utilisateurs.</p>
-          <p>Ce que j'aurais pu faire différemment, c'est mieux m'organiser dans le projet : établir un planning et
-            prendre des notes régulières de mon avancée. J'ai également rencontré plusieurs problèmes, comme une
-            nouvelle
-            problématique qui est survenue lorsque je pensais avoir terminé mon projet ; j'ai dû alors modifier tout ce
-            que j'avais fait pour y répondre.</p>
-          <p>Ce stage m'a aussi permis d'apprendre à travailler en autonomie, car mon tuteur n'était présent que deux
-            jours par semaine.</p>
+            réfléchir à quelles fonctionnalités inclure dans mon application pour la rendre aussi simple que possible
+            pour les utilisateurs.</p>
+          <p>Pour améliorer mon approche du projet, j'aurais dû mieux m'organiser en établissant un planning détaillé et
+            en consignant régulièrement mes progrès.
+            J'ai également été confronté à plusieurs difficultés, notamment une nouvelle problématique survenue alors
+            que je
+            pensais être à la fin de mon projet. J'ai dû revoir et modifier l'ensemble de mon travail pour y faire
+            face.</p>
+          <p>Ce stage m'a aussi permis d'apprendre à travailler de manière indépendante, car mon tuteur n'était présent
+            que quelques jours par semaine.</p>
         </div>
       </section><!-- /Starter Section Section -->
 
